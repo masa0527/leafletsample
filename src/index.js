@@ -21,6 +21,7 @@ const init = () => {
   const map = L.map("map", L.extend({
     zoom: 15,
     center: [ 35.6707, 139.7852 ],
+    renderer: L.canvas()
   }));
 
   const layers = L.control.layers({
