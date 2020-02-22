@@ -6,7 +6,6 @@ const enabledSourceMap = (MODE === 'production');
 module.exports = {
   mode: MODE,
   entry: [
-    'babel-polyfill',
     './src/index.js'
   ],
   output: {
@@ -23,7 +22,7 @@ module.exports = {
             loader: 'babel-loader',
             options: {
               presets: [
-                [ 'env', { 'modules': false } ]
+                '@babel/preset-env',
               ]
             }
           }
